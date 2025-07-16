@@ -4,6 +4,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float movement; 
+    [SerializeField] private float movementSpeed; 
+
+
     private Rigidbody2D rb2D;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = Input.GetAxis("Horizontal");
+        movement = Input.GetAxis("Horizontal") * movementSpeed;
     }
 
     private void FixedUpdate()
