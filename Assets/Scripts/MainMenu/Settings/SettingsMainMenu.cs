@@ -7,7 +7,7 @@ public class SettingsMainMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("Volume", volume);
         Debug.Log("Lauter..oder Leiser");
 
     }

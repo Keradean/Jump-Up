@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb2D;
     private Vector2 moveInput;
+    private GameManager gameManager; 
 
     public void OnMove(InputValue value)
     {
@@ -28,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        gameManager = FindAnyObjectByType<GameManager>();
+
+        if (gameManager = null) return; 
     }
 
     void FixedUpdate()
@@ -46,6 +50,13 @@ public class PlayerMovement : MonoBehaviour
         else if (transform.position.x > rightLimit)
         {
             transform.position = new Vector3(leftLimit, transform.position.y, transform.position.z);
+        }
+
+        if (rb2D.position.y < -1f)
+        {
+            FindAnyObjectByType<GameManager>().GameOver();
+
+            gameManager?.GameOver(); 
         }
     }
 }

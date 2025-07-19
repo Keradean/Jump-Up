@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class DestroyedPlatform : MonoBehaviour
 {
     public Rigidbody2D rb2D; 
     private void OnCollisionEnter2D(Collision2D collision)
