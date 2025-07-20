@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     
+    /*
     public void OnJump(InputValue value)
     {
         if (value.isPressed)
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
             rb2D.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
         }
     }
-
+    */
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
