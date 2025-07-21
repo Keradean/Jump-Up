@@ -28,8 +28,8 @@ public class Score : MonoBehaviour
             currentHighScore = currentScore;
             highScore.text = $"HighScore: {currentHighScore}";
 
-           // PlayerPrefs.SetInt("HighScore", currentHighScore);
-           // PlayerPrefs.Save(); 
+            PlayerPrefs.SetInt("HighScore", currentHighScore);
+            PlayerPrefs.Save(); 
         }
     }
 }

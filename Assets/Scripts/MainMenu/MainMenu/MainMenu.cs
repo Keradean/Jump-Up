@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
-        Debug.Log("Feierabend");
+        Debug.Log("Thank you for Playing my Game");
     }
 
 }
