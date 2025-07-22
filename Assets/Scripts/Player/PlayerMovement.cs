@@ -1,7 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+/// <summary>
+/// Handles player movement with horizontal controls and screen wrapping.
+/// Player can move left/right and wraps around screen boundaries.
+/// Game ends when player falls below a certain Y threshold.
+/// </summary>
+
+[RequireComponent(typeof(Rigidbody2D))] // 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
@@ -17,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>(); 
     }
 
-    
+    /// <summary>
+    /// Cheating...
+    /// </summary>
     /*
     public void OnJump(InputValue value)
     {
@@ -27,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     */
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -35,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         if (gameManager = null) return; 
     }
 
+    // <summary>
+    /// Handle physics-based movement in FixedUpdate for consistent frame rate.
+    /// Applies horizontal movement based on input while preserving vertical velocity.
+    /// </summary>
     void FixedUpdate()
     {
         Vector2 velocity = rb2D.linearVelocity;
@@ -42,6 +55,9 @@ public class PlayerMovement : MonoBehaviour
         rb2D.linearVelocity = velocity;
     }
 
+    /// <summary>
+    /// Handle screen wrapping and game over conditions after all other updates.
+    /// </summary>
     void LateUpdate()
     {
         if (transform.position.x < leftLimit)

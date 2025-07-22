@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5086686557594637388}
   - component: {fileID: -935224424066968562}
   m_Layer: 0
-  m_Name: "Plattform(vorl\xE4ufig)"
+  m_Name: Plattform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

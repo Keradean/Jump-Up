@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformPrefab: {fileID: 736993382199492281, guid: 72fa36a44179fe641bf529d8b69a827a, type: 3}
   amountOfPlatforms: 2000
-  levelWidth: 8
+  levelWidth: 5
   minY: 2
   maxY: 50
 --- !u!4 &974455317
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformPrefab: {fileID: 4702459303978428795}
   amountOfPlatforms: 200
-  levelWidth: 8
+  levelWidth: 5
   minY: 2
   maxY: 50
 --- !u!4 &1710674571
@@ -2290,7 +2290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -231.29999}
+  m_AnchoredPosition: {x: 0, y: -231.30005}
   m_SizeDelta: {x: 683, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1995976818
@@ -2427,7 +2427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4702459305209117802, guid: 6c69fb571038c344d9e1a22b9a53d3b5, type: 3}
       propertyPath: m_Name
-      value: "Plattform(vorl\xE4ufig)"
+      value: Plattform
       objectReference: {fileID: 0}
     - target: {fileID: 5086686557594637388, guid: 6c69fb571038c344d9e1a22b9a53d3b5, type: 3}
       propertyPath: rb2D

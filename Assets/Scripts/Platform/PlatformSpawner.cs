@@ -21,10 +21,4 @@ public class PlatformSpawner : MonoBehaviour
             Instantiate(PlatformPrefab, spawnPosition, Quaternion.identity);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
